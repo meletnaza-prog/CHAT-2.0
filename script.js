@@ -8,8 +8,7 @@ class AIChatApp {
         this.isTyping = false;
         
         // ** (NEW) Flowise API Endpoint **
-        this.flowiseEndpoint = "https://cloud.flowiseai.com/api/v1/prediction/e79ce275-0607-49b5-bf72-713026666cc5";
-        
+this.flowiseEndpoint = "https://cloud.flowiseai.com/api/v1/prediction/3a44ea4c-5cc3-4496-bbd9-3d3eef81eec8";
         this.initializeEventListeners();
         this.setupAutoResize();
         this.loadChatHistory();
