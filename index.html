@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RR-CHAT - AI Assistant</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-robot"></i>
+                    <span>RR-CHAT</span>
+                </div>
+                <div class="header-actions">
+                    <button class="btn-secondary">
+                        <i class="fas fa-cog"></i>
+                        Settings
+                    </button>
+                    <button class="btn-primary">
+                        <i class="fas fa-plus"></i>
+                        New Chat
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <div class="sidebar-header">
+                    <h3>Recent Chats</h3>
+                    <button class="btn-icon">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <div class="chat-list">
+                    <div class="chat-item active">
+                        <div class="chat-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <div class="chat-info">
+                            <h4>AI Assistant Chat</h4>
+                            <p>How can I help you today?</p>
+                        </div>
+                        <div class="chat-time">2m ago</div>
+                    </div>
+                    <div class="chat-item">
+                        <div class="chat-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="chat-info">
+                            <h4>Code Review</h4>
+                            <p>Reviewing React components</p>
+                        </div>
+                        <div class="chat-time">1h ago</div>
+                    </div>
+                    <div class="chat-item">
+                        <div class="chat-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <div class="chat-info">
+                            <h4>Creative Ideas</h4>
+                            <p>Brainstorming session</p>
+                        </div>
+                        <div class="chat-time">3h ago</div>
+                    </div>
+                </div>
+                <div class="sidebar-footer">
+                    <button class="btn-outline">
+                        <i class="fas fa-trash"></i>
+                        Clear History
+                    </button>
+                </div>
+            </aside>
+
+            <!-- Chat Area -->
+            <section class="chat-area">
+                <div class="chat-header">
+                    <div class="chat-title">
+                        <h2>AI Assistant</h2>
+                        <span class="status-indicator online">Online</span>
+                    </div>
+                    <div class="chat-actions">
+                        <button class="btn-icon">
+                            <i class="fas fa-share"></i>
+                        </button>
+                        <button class="btn-icon">
+                            <i class="fas fa-ellipsis-v"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="chat-messages" id="chatMessages">
+                    <div class="message-group">
+                        <div class="message ai-message">
+                            <div class="message-avatar">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div class="message-content">
+                                <div class="message-text">
+                                    Hello! I'm your AI assistant. How can I help you today? I can assist with various tasks including answering questions, helping with code, creative writing, and much more.
+                                </div>
+                                <div class="message-time">2:30 PM</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="message-group">
+                        <div class="message user-message">
+                            <div class="message-content">
+                                <div class="message-text">
+                                    Can you help me understand machine learning concepts?
+                                </div>
+                                <div class="message-time">2:32 PM</div>
+                            </div>
+                            <div class="message-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="message-group">
+                        <div class="message ai-message">
+                            <div class="message-avatar">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div class="message-content">
+                                <div class="message-text">
+                                    Absolutely! Machine learning is a subset of artificial intelligence that focuses on algorithms and statistical models that enable computers to improve their performance on a specific task through experience. Here are the key concepts:
+                                    <br><br>
+                                    <strong>1. Supervised Learning:</strong> Learning with labeled data
+                                    <br>
+                                    <strong>2. Unsupervised Learning:</strong> Finding patterns in unlabeled data
+                                    <br>
+                                    <strong>3. Reinforcement Learning:</strong> Learning through trial and error
+                                    <br><br>
+                                    Would you like me to explain any of these concepts in more detail?
+                                </div>
+                                <div class="message-time">2:33 PM</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Input Area -->
+                <div class="chat-input-area">
+                    <div class="input-container">
+                        <button class="btn-icon attachment-btn">
+                            <i class="fas fa-paperclip"></i>
+                        </button>
+                        <div class="input-wrapper">
+                            <textarea 
+                                id="messageInput" 
+                                placeholder="Type your message here..." 
+                                rows="1"
+                            ></textarea>
+                            <button class="btn-icon voice-btn">
+                                <i class="fas fa-microphone"></i>
+                            </button>
+                        </div>
+                        <button class="btn-send" id="sendButton">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                    <div class="input-footer">
+                        <span class="input-hint">
+                            Press Enter to send, Shift+Enter for new line
+                        </span>
+                        <div class="input-actions">
+                            <button class="btn-icon">
+                                <i class="fas fa-magic"></i>
+                            </button>
+                            <button class="btn-icon">
+                                <i class="fas fa-image"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-spinner">
+            <div class="spinner"></div>
+            <p>AI is thinking...</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

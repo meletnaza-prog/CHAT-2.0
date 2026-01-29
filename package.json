@@ -1,0 +1,41 @@
+{
+  "name": "figma-rr-chat",
+  "version": "1.0.0",
+  "description": "A modern AI chat application with beautiful UI and interactive features",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "serve": "npx serve .",
+    "dev": "npx live-server --port=3000"
+  },
+  "keywords": [
+    "ai",
+    "chat",
+    "javascript",
+    "html",
+    "css",
+    "responsive",
+    "voice-input",
+    "file-attachment"
+  ],
+  "author": {
+    "name": "meletnaza-prog",
+    "email": "meletnaza@gmail.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/meletnaza-prog/figma-rr-chat.git"
+  },
+  "bugs": {
+    "url": "https://github.com/meletnaza-prog/figma-rr-chat/issues"
+  },
+  "homepage": "https://github.com/meletnaza-prog/figma-rr-chat#readme",
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "serve": "^14.2.1"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
