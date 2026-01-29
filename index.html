@@ -7,43 +7,10 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        /* This ensures the Flowise bot fills your chat-area exactly */
-        .chat-area {
-            display: flex;
-            flex-direction: column;
-            position: relative;
-            height: 100%;
-            background: #ffffff;
-        }
-
-        flowise-fullchatbot {
-            flex: 1;
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-
-        /* Hiding your old static chat elements so the real bot can take over */
-        .chat-messages, .chat-input-area, .loading-overlay {
-            display: none !important;
-        }
-        
-        .app-container {
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .main-content {
-            flex: 1;
-            display: flex;
-            overflow: hidden;
-        }
-    </style>
 </head>
 <body>
     <div class="app-container">
+        <!-- Header -->
         <header class="header">
             <div class="header-content">
                 <div class="logo">
@@ -57,70 +24,9 @@
             </div>
         </header>
 
+        <!-- Main Content -->
         <main class="main-content">
+            <!-- Sidebar -->
             <aside class="sidebar">
                 <div class="sidebar-header">
-                    <h3>Recent Chats</h3>
-                    <button class="btn-icon"><i class="fas fa-search"></i></button>
-                </div>
-                <div class="chat-list">
-                    <div class="chat-item active">
-                        <div class="chat-icon"><i class="fas fa-comments"></i></div>
-                        <div class="chat-info">
-                            <h4>AI Assistant Chat</h4>
-                            <p>Connected to Flowise</p>
-                        </div>
-                        <div class="chat-time">Live</div>
-                    </div>
-                </div>
-                <div class="sidebar-footer">
-                    <button class="btn-outline"><i class="fas fa-trash"></i> Clear History</button>
-                </div>
-            </aside>
-
-            <section class="chat-area">
-                <div class="chat-header">
-                    <div class="chat-title">
-                        <h2>AI Assistant</h2>
-                        <span class="status-indicator online">Online</span>
-                    </div>
-                </div>
-
-                <flowise-fullchatbot></flowise-fullchatbot>
-            </section>
-        </main>
-    </div>
-
-    <script type="module">
-        import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
-        Chatbot.initFull({
-            chatflowid: "3a44ea4c-5cc3-4496-bbd9-3d3eef81eec8",
-            apiHost: "https://cloud.flowiseai.com",
-            theme: {
-                chatWindow: {
-                    welcomeMessage: "Hello! I'm your RR-CHAT assistant. How can I help you today?",
-                    backgroundColor: "#ffffff",
-                    fontSize: 16,
-                    botMessage: {
-                        backgroundColor: "#f7f8ff",
-                        textColor: "#303235",
-                        showAvatar: true,
-                        avatarSrc: "https://raw.githubusercontent.com/zahidkhawaja/langchain-chat-nextjs/main/public/parroticon.png",
-                    },
-                    userMessage: {
-                        backgroundColor: "#3B81F6",
-                        textColor: "#ffffff",
-                        showAvatar: true,
-                    },
-                    textInput: {
-                        placeholder: "Type your message here...",
-                        backgroundColor: "#ffffff",
-                        textColor: "#303235",
-                        sendButtonColor: "#3B81F6",
-                    }
-                }
-            }
-        })
-    </script>
-</body>
-</html>
+                    <h3>Recent C
