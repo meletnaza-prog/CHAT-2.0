@@ -9,6 +9,13 @@ class AIChatApp {
         
         // ** (NEW) Flowise API Endpoint **
 this.flowiseEndpoint = "https://cloud.flowiseai.com/api/v1/prediction/3a44ea4c-5cc3-4496-bbd9-3d3eef81eec8";
+```
+
+7. **Scroll down to the bottom**
+
+8. **In "Commit message" write:**
+```
+   Update Flowise endpoint
         this.initializeEventListeners();
         this.setupAutoResize();
         this.loadChatHistory();
